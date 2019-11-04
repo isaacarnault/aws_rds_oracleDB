@@ -224,14 +224,9 @@ CREATE TABLE students
      CONSTRAINT students_pk PRIMARY KEY (contact_id) 
   ); 
 ```
-<details>
-<summary>🔴 See output</summary>
-<p>
 
 [![isaac-arnault-oracle.png](https://i.postimg.cc/4xDshmyF/isaac-arnault-oracle.png)](https://postimg.cc/Hr9fqWQQ)
 
-</p>
-</details>
 
 You can create and provision tables in Oracle DB using PL/SQL syntax for more advanced needs.<br>
 
