@@ -8,11 +8,13 @@
 
 This gist was made on a `Ubuntu 18.04 LTS`.
 
-<b>A. Default OpenJDK installed on your Linux OS</b><br>
+<b>A. Default OpenJDK - installed on your local machine</b><br>
 
-<b>B. Oracle SQL Developer - Linux RPM</b><br>
+<b>B. Oracle SQL Developer - Linux RPM installed on your local machine</b><br>
 
-<b>C. An account on AWS to perform some post-installation tests (optional)</b><br>
+<b>C. Oracle DB instance hosted on AWS using RDS</b><br>
+
+<b>D. Remote connection to your DB using Oracle SQL Developer</b><br>
 
 <hr>
 
@@ -117,11 +119,11 @@ $ ./sqldeveloper.sh
 
 ### C. Connect to a database remotely
 
-  > If you have a `Cloud` user account on `AWS`, `Azure` or `GCP`, you may want to connect to your database using Oracle SQL Developer.<br>
+  > If you have an `AWS`, `Azure` or `GCP` account, you can connect to your database using Oracle SQL Developer.<br>
   
 I'm here using an `Oracle RDS` instance on my `AWS` account.
 
-#### Create an Oracle DB on AWS
+#### 3. Create an Oracle DB instance hosted on AWS with RDS
 
 On your `AWS Management Console`, go to Services > RDS.<br>
 
@@ -196,7 +198,9 @@ Then <b>Create database</b>. When your DB is up and running...
 
 [![dbrunning.png](https://i.postimg.cc/L627pvcs/dbrunning.png)](https://postimg.cc/yWpnhhYq)
 
-go back to `Oracle SQL Developer` locally and connect to your DB credentials.<br>
+#### 4. Connect and provision your DB remotely using Oracle SQL DB
+
+Go back to `Oracle SQL Developer` locally and connect to your DB credentials.<br>
 
 On <b>Connections</b> click on the "plus" button.<br>
 
