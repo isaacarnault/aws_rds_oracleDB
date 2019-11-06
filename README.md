@@ -212,11 +212,9 @@ Here you go! You are now connected to your Oracle DB remotely using Oracle SQL D
 
 In your left panel, you are connected to a database. Now you can create tables and start interracting with your DB.<br>
 
-#### PL/SQL syntax
+#### Using PL/SQL for provisioning our Oracle DB
 
-We are here using some `PL/SQL` syntax to show how our DB works.<br>
-
-You can create and provision tables in `Oracle` DB using `PL/SQL`.<br>
+You can create and provision tables in `Oracle` DB using `PL/SQL`. Here is a quick example on how you can create a table.
 
 ```r
 CREATE TABLE CUSTOMERS(
