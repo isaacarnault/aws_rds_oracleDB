@@ -112,8 +112,6 @@ The executable should be located in the opt/sqldeveloper ...
 ```r
 $ ./sqldeveloper.sh
 ```
-  
-[![oracle-sql-developer.png](https://i.postimg.cc/VLdByCKh/oracle-sql-developer.png)](https://postimg.cc/SJbzCJFL)
 
 <hr>
 
@@ -159,15 +157,6 @@ Master password: choose a password
 
 DB instance size: choose Burstable classes > select db.t3.micro
 
-<details>
-<summary>🔴 See configuration</summary>
-<p>
-  
-[![DBinstance-Size.png](https://i.postimg.cc/D0WMgz4S/DBinstance-Size.png)](https://postimg.cc/q6TwB4Lr)
-
-</p>
-</details>
-
 DB instance size: select Burstable classes (includes t classes) > db.t3.small
 
 Storage > Allocated storage: 20 GiB
@@ -212,39 +201,27 @@ Here you go! You are now connected to your Oracle DB remotely using Oracle SQL D
 
 In your left panel, you are connected to a database. Now you can create tables and start interracting with your DB.<br>
 
-#### Using PL/SQL for provisioning our Oracle DB
+#### Basic SQL syntax
 
-You can create and provision tables in `Oracle` DB using `PL/SQL`. Here is a quick example on how you can create a table.
+We are here using basic SQL syntax to show how our DB works.<br>
 
 ```r
-CREATE TABLE CUSTOMERS(
-ID NUMBER NOT NULL,
-NAME VARCHAR2(50) NOT NULL,
-AGE NUMBER NOT NULL,
-ADDRESS VARCHAR2(500),
-SALARY NUMBER,
-PRIMARY KEY (ID)
-);
-
-INSERT INTO CUSTOMERS (ID, NAME, AGE, ADDRESS, SALARY)
-VALUES (1, 'Joseph', 30, 'Athens', 2500.00);
-
-INSERT INTO CUSTOMERS (ID, NAME, AGE, ADDRESS, SALARY)
-VALUES (2, 'Marcel', 18, 'Paris', 885.00);
-
-INSERT INTO CUSTOMERS (ID, NAME, AGE, ADDRESS, SALARY)
-VALUES (3, 'Yan', 29, 'Oslo', 1350.00);
-
-INSERT INTO CUSTOMERS (ID, NAME, AGE, ADDRESS, SALARY)
-VALUES (4, 'Ludmilla', 22, 'Moscow', 2335.00);
-
-INSERT INTO CUSTOMERS (ID, NAME, AGE, ADDRESS, SALARY)
-VALUES (5, 'Anlil', 28, 'Baku', 4200.00);
-
-SELECT * FROM customers;
+CREATE TABLE students 
+  ( 
+     contact_id     NUMBER(10) NOT NULL, 
+     last_name      VARCHAR2(50) NOT NULL, 
+     first_name     VARCHAR2(50) NOT NULL, 
+     address        VARCHAR2(50), 
+     city           VARCHAR2(50), 
+     uni_assignment VARCHAR2(50), 
+     CONSTRAINT students_pk PRIMARY KEY (contact_id) 
+  ); 
 ```
 
-[![isaac-arnault-oracle.png](https://i.postimg.cc/s27BbpSy/isaac-arnault-oracle.png)](https://postimg.cc/HJWsy8BP)
+[![isaac-arnault-oracle.png](https://i.postimg.cc/4xDshmyF/isaac-arnault-oracle.png)](https://postimg.cc/Hr9fqWQQ)
+
+
+You can create and provision tables in Oracle DB using PL/SQL syntax for more advanced needs.<br>
 
 If you enjoyed this gist, feel free to fork and share it! Thanks.
 
